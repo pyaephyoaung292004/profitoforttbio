@@ -1,0 +1,535 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: black;
+    height: 100%;
+    width: 100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 70px;
+    background: black;
+}
+nav ul{
+    display: flex;
+    gap: 30px;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: auto;
+    height: 45px;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.logo img:hover{
+    opacity: 0.8;
+}
+.menu-icon{
+    display: none;
+}
+.menu-icon i{
+    color: white;
+    font-size: 30px;
+}
+.hero-section{
+    display: flex;
+    padding: 80px 10%;
+    align-items: center;
+    min-height: 80vh;
+}
+.name{
+    color: #d4af37;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.name span{
+    font-weight: bold;
+}
+.name::after{
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: #a30000;
+    margin-top: 8px;
+}
+.title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin: 15px 0;
+    color: #e0e0e0;
+}
+.quote-box{
+    border-left: 3px solid #633b2a;
+    padding-left: 15px;
+    margin: 20px 0;
+}
+.quote-box p {
+    font-style: italic;
+    color: #d4af37;
+    font-size: 1.2rem;
+}
+.description {
+    max-width: 600px;
+    line-height: 1.6;
+    color: #b0b0b0;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+.button-gp{
+    display: flex;
+    gap: 20px;
+}
+.btns{
+    text-decoration: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.first-btn{
+    background-color: #8b0000;
+    color: white;
+}
+.first-btn:hover{
+    background-color: #b30000;
+}
+.second-btn{
+    border: 1px solid #55443d;
+    color: #d1b8ab;
+}
+.second-btn:hover{
+    border: #55443d;
+    color: white;
+}
+.sec-2{
+    max-width: 800%;
+    text-align: center;
+    background-color: #0f0f0f;
+    color: #cccccc;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+.about-me{
+    max-width: 800px;
+    text-align: center;
+}
+h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center; /* ပုံထဲကလို ဘယ်ဘက်ကပ်ချင်လျှင် */
+    border-bottom: 2px solid #a52a2a; /* အောက်က မျဉ်းနီ */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Profile ပုံအတွက် Circle Design */
+.profile-container {
+    margin: 40px 0;
+}
+
+.profile-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #8b6b4e; /* ကြေးနီရောင် border */
+    object-fit: cover;
+}
+
+/* စာသားများ */
+.content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+}
+
+/* Quote (ရွှေရောင်စာသား) */
+.quote {
+    color: #d4af37; /* Gold color */
+    font-style: italic;
+    font-size: 1.2rem;
+    padding: 20px;
+    border-left: 2px solid #8b6b4e; /* ဘေးက မျဉ်းကြောင်း */
+    margin: 30px auto;
+    max-width: 90%;
+}
+
+.cta {
+    font-weight: 300;
+}
+.my-services{
+    text-align: center;
+    margin-top: 30px;
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    background-color: transparent;
+    padding: 50px;
+    cursor: pointer;
+}
+.card {
+    background-color: #181818;
+    padding: 40px;
+    border-radius: 15px;
+    border-top: 3px solid #b37d6d; /* ပုံထဲကလို အပေါ်က မျဉ်းကြောင်း */
+    text-align: left;
+    transition: 0.3s;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+
+/* FontAwesome Icon Styling */
+.icon-box i {
+    font-size: 35px; /* Icon အရွယ်အစား */
+    color: #ff9f7f; /* ပုံထဲကလို လိမ္မော်ရောင်သန်းတဲ့ဘက် */
+    margin-bottom: 25px;
+    display: block;
+}
+
+h3 {
+    color: white;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #999;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.quote {
+    color: #e2b35a; /* Gold/Yellow color */
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.my-Specialties{
+    text-align: center;
+    background-color: #0f0f0f;
+    height: 210vh;
+}
+.my-Specialties h2{
+    margin-top: 35px;
+}
+.cards{
+    background-color: #181818;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: left;
+    transition: 0.3s;
+}
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    background-color: transparent;
+    padding: 50px;
+}
+.cards:hover{
+    transform: translateY(-10px);
+}
+.software { /* ဒီ class နာမည်ကို သင့် HTML နဲ့ ကိုက်အောင် စစ်ပေးပါ */
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px 0;
+}
+.exper {
+    display: flex;
+    justify-content: center; /* အလျားလိုက် အလယ်ပို့ပေးသည် */
+    gap: 15px; /* ခလုတ်တစ်ခုနဲ့တစ်ခု အကွာအဝေး */
+    flex-wrap: wrap; /* Screen သေးရင် အောက်ဆင်းပေးသည် */
+}
+
+/* ခလုတ်များ၏ ပုံစံ */
+.ware {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 1px solid #333;
+}
+.button{
+    margin-top: 20px;
+}
+.bns{
+    text-decoration: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.third-btn{
+    background-color: #8b0000;
+    color: white;
+    margin-right: 20px;
+}
+.third-btn:hover{
+    background-color: #b30000;
+}
+.fort-btn{
+    border: 1px solid #55443d;
+    color: #d1b8ab;
+}
+.fort-btn:hover{
+    border: #55443d;
+    color: white;
+}
+.work{
+    text-align: left;
+}
+.works h2{
+    margin-right: 10px;
+}
+.work{
+    margin: 40px 30px;
+}
+.contact-section {
+    background-color: #0a0a0a; /* Dark background */
+    color: white;
+    padding: 60px 10%;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    border-left: 4px solid red; /* ဘေးက မျဉ်းနီ */
+    padding-left: 15px;
+}
+
+/* Grid Layout */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* နှစ်ခြမ်းညီခွဲသည် */
+    gap: 50px;
+    align-items: start;
+}
+
+/* အချက်အလက်များ styling */
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #a31a1a; /* အနီရင့်ရောင် */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.info-item p {
+    color: #aaa;
+    margin: 0;
+}
+
+/* Form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+    background-color: #151515;
+    border: 1px solid #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-form input:focus {
+    border-color: #a31a1a;
+}
+
+.send-btn {
+    background-color: #a31a1a;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.send-btn:hover {
+    background-color: red;
+}
+.main-footer {
+    background-color: #111; /* ပတ်ဝန်းကျင်ထက် နည်းနည်းပိုလင်းသော အမည်းရောင် */
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-logo span {
+    color: #a31a1a; /* Edits စာလုံးအတွက် အနီရောင် */
+}
+
+.footer-quote {
+    color: #d4af37; /* ရွှေရောင် */
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.footer-info {
+    color: #bbb;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.footer-line {
+    border: 0;
+    border-top: 1px solid #333;
+    width: 80%;
+    margin: 0 auto 30px auto;
+}
+
+.footer-copyright {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.footer-rates {
+    color: #666;
+    font-size: 0.85rem;
+}
+/* ပထမဦးဆုံး အနေအထား (ဖျောက်ထားမယ်) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px); /* အောက်ကို ၃၀px နိမ့်ထားမယ် */
+    transition: all 0.8s ease-out; /* ဖြည်းဖြည်းချင်း ပေါ်လာစေရန် */
+}
+
+/* Scroll ရောက်တဲ့အခါ ပေါ်လာမယ့် အနေအထား */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0); /* မူလနေရာ ပြန်ရောက်မယ် */
+}
+@media screen and (max-width: 600px) {
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: black;
+        gap: 0;
+        overflow: hidden;
+    }
+    nav ul li{
+        padding: 20px;
+    }
+    .menu-icon{
+        display: block;
+    }
+    #menuList{
+        transition: all 0.5s;
+    }
+    .hero-section{
+        padding: 40px 20px;
+        text-align: left;
+    }
+    .title{
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    .name {
+        font-size: 1.1rem;
+    }
+
+    .quote-box p {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+    .button-gp{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btns{
+        text-align: center;
+        display: block;
+        padding: 15px;
+    }
+    .my-Specialties p{
+        font-size: 10px;
+    }
+    video{
+        width: 250px;
+        margin-top: 20px;
+    }
+    .footer-logo{
+        font-size: 16px;
+    }
+    .footer-quote{
+        font-size: 10px;
+    }
+    .footer-info{
+        font-size: 10px;
+    }
+    .contact-container {
+        grid-template-columns: 1fr; /* ဖုန်းမှာ တစ်ခုချင်း စီပြရန် */
+    }
+}
